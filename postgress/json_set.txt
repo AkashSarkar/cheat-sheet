@@ -1,0 +1,7 @@
+json_set('target',{path},value)
+
+example
+
+DB::statement("UPDATE assign_leaves SET data = 
+JSONB_SET(\"data\",?,TO_JSONB(?::json),true) where employee_id = ?",
+['{'.$payload['leave_period'].'}',json_encode($payload['data']),$payload['employee_id']]);
