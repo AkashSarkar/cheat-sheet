@@ -1,0 +1,1 @@
+substr($image->getClientMimeType(), strpos($image->getClientMimeType(), "/") + 1)
