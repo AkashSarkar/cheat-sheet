@@ -1,10 +1,7 @@
 <template>
-  <v-select
-    v-model="selectedAirline"
-    :options="airlines"
-    @search="onSearch"
-    :disabled="disableEdit"
-  ></v-select>
+  <v-select v-model="selectedAirline" :options="airlines" @search="onSearch">
+      
+  </v-select>
 </template>
 <script>
 import vSelect from "vue-select";

@@ -1,0 +1,5 @@
+$ids; // array of ids
+$placeholders = implode(',',array_fill(0, count($ids), '?')); // string for the query
+
+Operation::whereIn('id', $ids)
+   ->orderByRaw("field(id,{$placeholders})", $ids)->get();
