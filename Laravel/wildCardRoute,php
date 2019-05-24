@@ -1,0 +1,2 @@
+<?php
+Route::view('/{path}', 'layouts.app')->where('path', '.*');
